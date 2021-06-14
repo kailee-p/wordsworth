@@ -39,16 +39,22 @@ function App() {
         ...prevState,
         bigramCount: TextAnalysis.getBigramCount(text)
       }));  
-    }
 
-    if (text && text.length <= 280) { //only call wit.ai API if text within limits
-      (async () => {
-        const sentiment = await TextAnalysis.sentimentAnalysis(text);
+      //SENTIMENT ANALYSIS
+      if (text.length <= 280) { //only call wit.ai API if text within character limits
+        (async () => {
+          const sentiment = await TextAnalysis.sentimentAnalysis(text);
+          setAnalytics(prevState => ({
+            ...prevState,
+            sentimentAnalysis: sentiment,
+          }));
+        })();
+      } else { //if text is too long
         setAnalytics(prevState => ({
           ...prevState,
-          sentimentAnalysis: sentiment,
-        }));
-      })();
+          sentimentAnalysis: 'Your text is too long for analysis.' 
+        }));  
+      }
     }
   }, [text]);
 
@@ -59,6 +65,7 @@ function App() {
         <AnalysisContainer 
           text={text} 
           setText={setText}
+          analytics={analytics}
         />
       </header>
     </div>
