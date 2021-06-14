@@ -14,7 +14,7 @@ Wordsworth is a React app that allows the user to input text, which is then anal
 
 You can check out Wordsworth here: https://kailee-p.github.io/wordsworth/
 
-To run this project locally, create an account with [Wit.ai](https://wit.ai/) and obtain a client access token. Create a .env file in the root folder and add REACT_APP_CLIENT_TOKEN=<YOUR-TOKEN>.
+To run this project locally, create an account with [Wit.ai](https://wit.ai/) and obtain a client access token. Create a .env file in the root folder and add REACT_APP_CLIENT_TOKEN=YOUR-TOKEN-HERE.
 
 ```
 npm install
