@@ -1,41 +1,56 @@
 import './App.css';
 import { useState, useEffect } from 'react';
+import TextAnalysis from './TextAnalysis';
 import AnalysisContainer from './AnalysisContainer';
 
 function App() {
   const [text, setText] = useState(''); //sets initial state for text
+  const [analytics, setAnalytics] = useState({
+    charCount: 0,
+    wordCount: 0,
+    sentenceCount: 0,
+    paragraphCount: 0,
+    bigramCount: 0,
+    sentimentAnalysis: 'Unable to determine sentiment at this time.',
+  })
 
   console.log('text: ', text);
-  console.log('type of text', typeof text);
-
-  function getCharCount(text) { //gets character count from text, including spaces
-    return text.length;
-  }
-
-  function getWordCount(text) { //gets word count from text
-    return text.split(' ').length; //split by spaces in text and get length of array
-  }
-
-  function getSentenceCount(text) { //gets paragraph count from text
-    return text.split(/[.!?]+\s/).length; //split by terminating punctuation and whitespace
-  }
-
-  function getParagraphCount (text) {
-
-  }
-
-  function getBigramCount(text) { //gets bigram count from text
-    //split the text into individual arrays for each sentence
-
-  }
+  console.log('analytics: ', analytics)
 
   useEffect(() => { //whenever the text changes, analyze it
     if (text) { //only if there is text to analyze 
-      getCharCount(text);
-      getWordCount(text);
-      getSentenceCount(text);
+      setAnalytics(prevState => ({
+        ...prevState,
+        charCount: TextAnalysis.getCharCount(text)
+      }));
+      setAnalytics(prevState => ({
+        ...prevState,
+        wordCount: TextAnalysis.getWordCount(text)
+      }));
+      setAnalytics(prevState => ({
+        ...prevState,
+        sentenceCount: TextAnalysis.getSentenceCount(text)
+      }));
+      setAnalytics(prevState => ({
+        ...prevState,
+        paragraphCount: TextAnalysis.getParagraphCount(text)
+      }));
+      setAnalytics(prevState => ({
+        ...prevState,
+        bigramCount: TextAnalysis.getBigramCount(text)
+      }));  
     }
-  })
+
+    if (text && text.length <= 280) { //only call wit.ai API if text within limits
+      (async () => {
+        const sentiment = await TextAnalysis.sentimentAnalysis(text);
+        setAnalytics(prevState => ({
+          ...prevState,
+          sentimentAnalysis: sentiment,
+        }));
+      })();
+    }
+  }, [text]);
 
   return (
     <div className="App">
