@@ -23,7 +23,7 @@ npm start
 
 Your server will start on http://localhost:3000/.
 
-NOTE: It is not recommended to store API keys in frontend code. However due to the time constraints of the project, and my own focus on frontend code, I opted not to construct a backend. 
+NOTE: It is not recommended to store API keys in frontend code for security reasons. However due to the time constraints of the project and the fact that Wit.ai is free to use for anyone with a registered account, I opted not to construct a backend.  
 
 ## Authors
 Kailee Pedersen - https://github.com/kailee-p
