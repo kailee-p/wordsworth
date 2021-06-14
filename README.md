@@ -24,6 +24,6 @@ npm start
 Your server will start on http://localhost:3000/.
 
 ## Authors
-Kailee Pedersen
+Kailee Pedersen - https://github.com/kailee-p
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
