@@ -23,6 +23,8 @@ npm start
 
 Your server will start on http://localhost:3000/.
 
+NOTE: It is not recommended to store API keys in frontend code. However due to the time constraints of the project, and my own focus on frontend code, I opted not to construct a backend. 
+
 ## Authors
 Kailee Pedersen - https://github.com/kailee-p
 
