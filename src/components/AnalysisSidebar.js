@@ -41,7 +41,7 @@ export default function AnalysisSidebar({ analytics }) {
         <br />
         { analytics.sentimentAnalysis }
       </div>
-      <ReactTooltip id="sentimentAnalysis" />
+      <ReactTooltip id="sentimentAnalysis" html={true} />
     </div>
   )
 }
