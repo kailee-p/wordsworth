@@ -35,7 +35,7 @@ export default function AnalysisSidebar({ analytics }) {
       <ReactTooltip id="bigramCount" html={true} />
       <div
         className="analysis-item"
-        data-tip="Uses wit.ai to perform sentiment analysis on short (280 characters or less) pieces of text."
+        data-tip="Uses Wit.ai to perform sentiment analysis on short (280 characters or less) pieces of text."
         data-for="sentimentAnalysis"
         data-place="top"><strong>Sentiment:</strong> 
         <br />
