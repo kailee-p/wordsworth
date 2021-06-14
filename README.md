@@ -4,7 +4,7 @@ A simple app that analyzes text.
 
 ## Description 
 
-Wordsworth is a React app that allows the user to input text, which is then analyzed for character/sentence/paragraph/bigram count. Wordsworth additionally uses the Wit.ai NLP interface to analyze the text's sentiment, if the text is 280 characters or less and does not contain paragraph breaks.
+Wordsworth is a React app that allows the user to input text, which is then analyzed for character/sentence/paragraph/bigram count. Wordsworth additionally uses the Wit.ai NLP interface to attempt sentiment analysis on the text, if the text is 280 characters or less.
 
 ## Challenge Selected
 
