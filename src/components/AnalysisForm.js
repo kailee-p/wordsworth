@@ -1,7 +1,9 @@
+import '../css/AnalysisForm.css';
+
 export default function AnalysisForm({ text, setText }) {
   return (
     <div id="analysis-form">
-     <label id="analysis-label" htmlFor="text-analysis-textarea">Analyze your text!</label>
+     <label id="text-analysis-label" htmlFor="text-analysis-textarea">Analyze your text!</label>
      <textarea 
         id="text-analysis-textarea" 
         value={text}

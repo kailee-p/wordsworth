@@ -1,0 +1,8 @@
+#analysis-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#text-analysis-textarea {
+  margin-top: 20px;
+}

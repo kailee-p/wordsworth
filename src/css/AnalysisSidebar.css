@@ -1,0 +1,11 @@
+#analysis-sidebar {
+  display: flex;
+  flex-direction: column;
+  min-width: 500px;
+  margin: 20px;
+  font-size: .85em;
+}
+
+.analysis-item {
+  margin-top: 10px;
+}

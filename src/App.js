@@ -1,4 +1,4 @@
-import './App.css';
+import './css/App.css';
 import { useState, useEffect } from 'react';
 import TextAnalysis from './TextAnalysis';
 import AnalysisContainer from './AnalysisContainer';
@@ -13,9 +13,6 @@ function App() {
     bigramCount: 0,
     sentimentAnalysis: 'Unable to determine sentiment at this time.',
   })
-
-  console.log('text: ', text);
-  console.log('analytics: ', analytics)
 
   useEffect(() => { //whenever the text changes, analyze it
     if (text) { //only if there is text to analyze 

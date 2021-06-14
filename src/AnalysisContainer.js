@@ -1,3 +1,4 @@
+import './css/AnalysisContainer.css';
 import AnalysisForm from './components/AnalysisForm';
 import AnalysisSidebar from './components/AnalysisSidebar';
 
