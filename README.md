@@ -1,6 +1,6 @@
 # Wordsworth
 
-A simple app that analyzes text.
+A simple frontend web application for text analysis with limited NLP.	
 
 ## Description 
 
