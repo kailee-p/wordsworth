@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wordsworth/static/css/main.bcd9906b.chunk.css",
-    "main.js": "/wordsworth/static/js/main.40af0bae.chunk.js",
-    "main.js.map": "/wordsworth/static/js/main.40af0bae.chunk.js.map",
+    "main.js": "/wordsworth/static/js/main.3e3338b0.chunk.js",
+    "main.js.map": "/wordsworth/static/js/main.3e3338b0.chunk.js.map",
     "runtime-main.js": "/wordsworth/static/js/runtime-main.7dc5e1d8.js",
     "runtime-main.js.map": "/wordsworth/static/js/runtime-main.7dc5e1d8.js.map",
     "static/js/2.31b9eb09.chunk.js": "/wordsworth/static/js/2.31b9eb09.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.7dc5e1d8.js",
     "static/js/2.31b9eb09.chunk.js",
     "static/css/main.bcd9906b.chunk.css",
-    "static/js/main.40af0bae.chunk.js"
+    "static/js/main.3e3338b0.chunk.js"
   ]
 }
